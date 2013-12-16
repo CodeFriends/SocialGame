@@ -18,7 +18,7 @@
     <ClCompile Include="Lapr5.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\..\Desktop\proj\grafo\grafos.cpp">
+    <ClCompile Include="grafos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

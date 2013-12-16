@@ -166,7 +166,7 @@ void imprime_ajuda(void)
   printf("n,N - Liga/Desliga apresentação das normais \n");
   printf("******* grafos ******* \n");
   printf("F1  - Grava grafo do ficheiro \n");
-  printf("F2  - Lê grafo para ficheiro \n");
+  printf("F2  - LEgrafo para ficheiro \n");
   printf("F6  - Cria novo grafo\n");
   printf("******* Camera ******* \n");
   printf("Botão esquerdo - Arrastar os eixos (centro da camera)\n");
@@ -503,7 +503,7 @@ void desenhaArco(Arco arco){
 			desenhaParede(nof->x-0.5*nof->largura,nof->y-0.5*arco.largura,nof->z,noi->x+0.5*noi->largura,noi->y-0.5*arco.largura,noi->z);
 		}
 		else{
-			cout << "arco diagonal... não será desenhado";
+			cout << "arco diagonal... não serEdesenhado";
 		}
 	}
 }
@@ -754,10 +754,10 @@ void Special(int key, int x, int y){
 
 void setProjection(int x, int y, GLboolean picking){
     glLoadIdentity();
-	if (picking) { // se está no modo picking, lê viewport e define zona de picking
+	if (picking) { // se estEno modo picking, lEviewport e define zona de picking
 		GLint vport[4];
 		glGetIntegerv(GL_VIEWPORT, vport);
-		gluPickMatrix(x, glutGet(GLUT_WINDOW_HEIGHT)  - y, 4, 4, vport); // Inverte o y do rato para corresponder à jana
+		gluPickMatrix(x, glutGet(GLUT_WINDOW_HEIGHT)  - y, 4, 4, vport); // Inverte o y do rato para corresponder Ejana
 	}
 	    
 	gluPerspective(estado.camera.fov,(GLfloat)glutGet(GLUT_WINDOW_WIDTH) /glutGet(GLUT_WINDOW_HEIGHT) ,1,500);

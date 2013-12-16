@@ -80,7 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\Desktop\proj\grafo\grafos.cpp" />
+    <ClCompile Include="grafos.cpp" />
     <ClCompile Include="Lapr5.cpp" />
   </ItemGroup>
   <ItemGroup>
