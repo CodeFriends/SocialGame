@@ -84,7 +84,7 @@
     <ClCompile Include="Lapr5.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\proj\grafo\grafos.h" />
+    <ClInclude Include="grafos.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

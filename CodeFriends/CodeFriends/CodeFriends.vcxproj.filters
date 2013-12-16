@@ -23,7 +23,7 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\..\Desktop\proj\grafo\grafos.h">
+    <ClInclude Include="grafos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
