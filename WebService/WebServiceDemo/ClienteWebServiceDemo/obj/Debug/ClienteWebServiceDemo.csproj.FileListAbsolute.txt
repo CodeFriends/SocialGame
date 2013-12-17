@@ -1,0 +1,6 @@
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\bin\Debug\ClienteWebServiceDemo.exe.config
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\bin\Debug\ClienteWebServiceDemo.exe
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\bin\Debug\ClienteWebServiceDemo.pdb
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\obj\Debug\ClienteWebServiceDemo.csprojResolveAssemblyReference.cache
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\obj\Debug\ClienteWebServiceDemo.exe
+C:\Users\Mugen\Documents\Visual Studio 2012\Projects\WebServiceDemo\ClienteWebServiceDemo\obj\Debug\ClienteWebServiceDemo.pdb
