@@ -1,0 +1,2 @@
+password NSClinet -s ''
+port emissao check nt NSClient  -p 12489
