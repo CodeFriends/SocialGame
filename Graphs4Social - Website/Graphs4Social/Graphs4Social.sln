@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphs4Social", "Graphs4Social\Graphs4Social.csproj", "{3C184659-9695-4746-9312-4A956F965244}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{6F4DB95A-ECE8-4A75-B089-9ED23C91564D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{1D61F942-D1C2-46A2-A666-F714B5E9F817}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3C184659-9695-4746-9312-4A956F965244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C184659-9695-4746-9312-4A956F965244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C184659-9695-4746-9312-4A956F965244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C184659-9695-4746-9312-4A956F965244}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F4DB95A-ECE8-4A75-B089-9ED23C91564D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F4DB95A-ECE8-4A75-B089-9ED23C91564D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F4DB95A-ECE8-4A75-B089-9ED23C91564D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F4DB95A-ECE8-4A75-B089-9ED23C91564D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D61F942-D1C2-46A2-A666-F714B5E9F817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D61F942-D1C2-46A2-A666-F714B5E9F817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D61F942-D1C2-46A2-A666-F714B5E9F817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D61F942-D1C2-46A2-A666-F714B5E9F817}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
