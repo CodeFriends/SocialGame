@@ -1,5 +1,0 @@
-C:\Users\i100590\Desktop\Graphs4Social\Graphs4Social\DAL\bin\Debug\DAL.dll
-C:\Users\i100590\Desktop\Graphs4Social\Graphs4Social\DAL\bin\Debug\DAL.pdb
-C:\Users\i100590\Desktop\Graphs4Social\Graphs4Social\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\i100590\Desktop\Graphs4Social\Graphs4Social\DAL\obj\Debug\DAL.dll
-C:\Users\i100590\Desktop\Graphs4Social\Graphs4Social\DAL\obj\Debug\DAL.pdb
