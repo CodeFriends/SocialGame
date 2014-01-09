@@ -295,36 +295,36 @@ void desenhaNormal(GLdouble x, GLdouble y, GLdouble z, GLdouble normal[], tipo_m
 	glEnable(GL_LIGHTING);
 }
 
-void desenhaParede(GLfloat xi, GLfloat yi, GLfloat zi, GLfloat xf, GLfloat yf, GLfloat zf){
-	GLdouble v1[3],v2[3],cross[3];
-	GLdouble length;
-	v1[0]=xf-xi;
-	v1[1]=yf-yi;
-	v1[2]=0;
-	v2[0]=0;
-	v2[1]=0;
-	v2[2]=1;
-	CrossProduct(v1,v2,cross);
-	//printf("cross x=%lf y=%lf z=%lf",cross[0],cross[1],cross[2]);
-	length=VectorNormalize(cross);
-	//printf("Normal x=%lf y=%lf z=%lf length=%lf\n",cross[0],cross[1],cross[2]);
-
-	material(emerald);
-	glBegin(GL_QUADS);
-		glNormal3dv(cross);
-		glVertex3f(xi,yi,zi);
-		glVertex3f(xf,yf,zf+0);
-		glVertex3f(xf,yf,zf+1);
-		glVertex3f(xi,yi,zi+1);
-	glEnd();
-
-	if(estado.apresentaNormais) {
-		desenhaNormal(xi,yi,zi,cross,emerald);
-		desenhaNormal(xf,yf,zf,cross,emerald);
-		desenhaNormal(xf,yf,zf+1,cross,emerald);
-		desenhaNormal(xi,yi,zi+1,cross,emerald);
-	}
-}
+//void desenhaParede(GLfloat xi, GLfloat yi, GLfloat zi, GLfloat xf, GLfloat yf, GLfloat zf){
+//	GLdouble v1[3],v2[3],cross[3];
+//	GLdouble length;
+//	v1[0]=xf-xi;
+//	v1[1]=yf-yi;
+//	v1[2]=0;
+//	v2[0]=0;
+//	v2[1]=0;
+//	v2[2]=1;
+//	CrossProduct(v1,v2,cross);
+//	//printf("cross x=%lf y=%lf z=%lf",cross[0],cross[1],cross[2]);
+//	length=VectorNormalize(cross);
+//	//printf("Normal x=%lf y=%lf z=%lf length=%lf\n",cross[0],cross[1],cross[2]);
+//
+//	material(emerald);
+//	glBegin(GL_QUADS);
+//		glNormal3dv(cross);
+//		glVertex3f(xi,yi,zi);
+//		glVertex3f(xf,yf,zf+0);
+//		glVertex3f(xf,yf,zf+1);
+//		glVertex3f(xi,yi,zi+1);
+//	glEnd();
+//
+//	if(estado.apresentaNormais) {
+//		desenhaNormal(xi,yi,zi,cross,emerald);
+//		desenhaNormal(xf,yf,zf,cross,emerald);
+//		desenhaNormal(xf,yf,zf+1,cross,emerald);
+//		desenhaNormal(xi,yi,zi+1,cross,emerald);
+//	}
+//}
 
 void desenhaChao(GLfloat xi, GLfloat yi, GLfloat zi, GLfloat xf, GLfloat yf, GLfloat zf, int orient){
 	GLdouble v1[3],v2[3],cross[3];
@@ -441,7 +441,7 @@ void desenhaNo(int no){
 		if (norte && sul && este && oeste)
 			return;
 	}		
-	if(norte)
+	/*if(norte)
 		desenhaParede(nos[no].x-0.5*noi->largura,nos[no].y+0.5*noi->largura,nos[no].z,nos[no].x+0.5*noi->largura,nos[no].y+0.5*noi->largura,nos[no].z);
 	else
 		if (larguraNorte < noi->largura){
@@ -468,7 +468,7 @@ void desenhaNo(int no){
 		if (larguraOeste < noi->largura){
 			desenhaParede(nos[no].x+0.5*noi->largura,nos[no].y+0.5*noi->largura,nos[no].z,nos[no].x+0.5*noi->largura,nos[no].y+0.5*larguraOeste,nos[no].z);
 			desenhaParede(nos[no].x+0.5*noi->largura,nos[no].y-0.5*larguraOeste,nos[no].z,nos[no].x+0.5*noi->largura,nos[no].y-0.5*noi->largura,nos[no].z);
-		}
+		}*/
 }
 
 
@@ -486,8 +486,8 @@ void desenhaArco(Arco arco){
 		}
 
 		desenhaChao(noi->x-0.5*arco.largura,noi->y+0.5*noi->largura,noi->z,nof->x+0.5*arco.largura,nof->y-0.5*nof->largura,nof->z, NORTE_SUL);
-		desenhaParede(noi->x-0.5*arco.largura,noi->y+0.5*noi->largura,noi->z,nof->x-0.5*arco.largura,nof->y-0.5*nof->largura,nof->z);
-		desenhaParede(nof->x+0.5*arco.largura,nof->y-0.5*nof->largura,nof->z,noi->x+0.5*arco.largura,noi->y+0.5*noi->largura,noi->z);
+		//desenhaParede(noi->x-0.5*arco.largura,noi->y+0.5*noi->largura,noi->z,nof->x-0.5*arco.largura,nof->y-0.5*nof->largura,nof->z);
+		//desenhaParede(nof->x+0.5*arco.largura,nof->y-0.5*nof->largura,nof->z,noi->x+0.5*arco.largura,noi->y+0.5*noi->largura,noi->z);
 	}else{
 		if(nos[arco.noi].y==nos[arco.nof].y){
 			//arco horizontal
@@ -499,8 +499,8 @@ void desenhaArco(Arco arco){
 				noi=&nos[arco.nof];
 			}
 			desenhaChao(noi->x+0.5*noi->largura,noi->y-0.5*arco.largura,noi->z,nof->x-0.5*nof->largura,nof->y+0.5*arco.largura,nof->z, ESTE_OESTE);
-			desenhaParede(noi->x+0.5*noi->largura,noi->y+0.5*arco.largura,noi->z,nof->x-0.5*nof->largura,nof->y+0.5*arco.largura,nof->z);
-			desenhaParede(nof->x-0.5*nof->largura,nof->y-0.5*arco.largura,nof->z,noi->x+0.5*noi->largura,noi->y-0.5*arco.largura,noi->z);
+			//desenhaParede(noi->x+0.5*noi->largura,noi->y+0.5*arco.largura,noi->z,nof->x-0.5*nof->largura,nof->y+0.5*arco.largura,nof->z);
+			//desenhaParede(nof->x-0.5*nof->largura,nof->y-0.5*arco.largura,nof->z,noi->x+0.5*noi->largura,noi->y-0.5*arco.largura,noi->z);
 		}
 		else{
 			cout << "arco diagonal... não serEdesenhado";

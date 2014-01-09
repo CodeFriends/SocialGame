@@ -1,13 +1,14 @@
-﻿Build started 17-12-2013 12:28:44.
-     1>Project "C:\Users\user\Desktop\Graphs4Social - Aplicaçao 3D\Graphs4Social\CodeFriends\CodeFriends.vcxproj" on node 2 (Build target(s)).
+﻿Build started 09-01-2014 16:23:19.
+     1>Project "C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\CodeFriends\CodeFriends.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt grafos.cpp Lapr5.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Lapr5.cpp
          Lapr5.cpp
-     1>c:\users\user\desktop\graphs4social - aplicaçao 3d\graphs4social\codefriends\lapr5.cpp(4): fatal error C1083: Cannot open include file: 'GL\glut.h': No such file or directory
-         grafos.cpp
-         Generating Code...
-     1>Done Building Project "C:\Users\user\Desktop\Graphs4Social - Aplicaçao 3D\Graphs4Social\CodeFriends\CodeFriends.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\Debug\CodeFriends.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\Debug\CodeFriends.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\Debug\CodeFriends.lib" /MACHINE:X86 Debug\grafos.obj
+         Debug\Lapr5.obj
+         CodeFriends.vcxproj -> C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\Debug\CodeFriends.exe
+     1>Done Building Project "C:\Users\Mugen\ISEP\2013-2014\LAPR5\CodeFriends\SocialGame\Graphs4Social - Aplicaçao 3D\Graphs4Social\CodeFriends\CodeFriends.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.58
+Time Elapsed 00:00:04.19

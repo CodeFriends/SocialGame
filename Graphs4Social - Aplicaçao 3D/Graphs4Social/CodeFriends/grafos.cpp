@@ -24,7 +24,7 @@ void deleteNo(int indNo){
 		for(int i=indNo; i<numNos; nos[i++]=nos[i+i]);
 		numNos--;
 	}else{
-		cout << "Indíce de nó inválido" << endl;
+		cout << "Indú€e de nEinválido" << endl;
 	}
 }
 
@@ -58,12 +58,12 @@ void deleteArco(int indArco){
 		for(int i=indArco; i<numArcos; arcos[i++]=arcos[i+i]);
 		numArcos--;
 	}else{
-		cout << "Indíce de arco inválido" << endl;
+		cout << "Indú€e de arco inválido" << endl;
 	}
 }
 
 void imprimeArco(Arco arco){
-	cout << "No início:" << arco.noi << "Nó final:" << arco.nof << "Peso:" << arco.peso << "Largura:" << arco.largura << endl;
+	cout << "No inú€io:" << arco.noi << "NEfinal:" << arco.nof << "Peso:" << arco.peso << "Largura:" << arco.largura << endl;
 }
 
 void listArcos(){
