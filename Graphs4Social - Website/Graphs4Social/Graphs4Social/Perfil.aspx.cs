@@ -14,38 +14,41 @@ namespace Graphs4Social
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (User.Identity.IsAuthenticated)
+            if (!Page.IsPostBack)
             {
-                string username = User.Identity.Name;
-                string existe = perfil.verificaUtilizador(username);
-
-                if (existe == "sim")
+                if (User.Identity.IsAuthenticated)
                 {
-                    DataTable dtUsers = perfil.getPerfil(username);
 
-                    TextBox1.Text = Convert.ToString(dtUsers.Rows[0]["nome_completo"]);
-                    TextBox2.Text = Convert.ToString(dtUsers.Rows[0]["data_nascimento"]);
-                    string sexo = Convert.ToString(dtUsers.Rows[0]["sexo"]);
-                    if (sexo == "Masculino")
+                    string username = User.Identity.Name;
+                    string existe = perfil.verificaUtilizador(username);
+
+                    if (existe == "sim")
                     {
-                        DropDownList1.SelectedValue = "Masculino";
+                        DataTable dtUsers = perfil.getPerfil(username);
+
+                        TextBox1.Text = Convert.ToString(dtUsers.Rows[0]["nome_completo"]);
+                        TextBox2.Text = Convert.ToString(dtUsers.Rows[0]["data_nascimento"]);
+                        string sexo = Convert.ToString(dtUsers.Rows[0]["sexo"]);
+                        if (sexo == "Masculino")
+                        {
+                            DropDownList1.SelectedValue = "Masculino";
+                        }
+                        else
+                        {
+                            DropDownList1.SelectedValue = "Feminino";
+                        }
+                        TextBox4.Text = Convert.ToString(dtUsers.Rows[0]["avatar"]);
                     }
                     else
                     {
-                        DropDownList1.SelectedValue = "Feminino";
+                        //Se não existe perfil do utilizador, então fica tudo em branco (por preencher)
                     }
-                    TextBox4.Text = Convert.ToString(dtUsers.Rows[0]["avatar"]);
                 }
                 else
                 {
-                    //Se não existe perfil do utilizador, então fica tudo em branco (por preencher)
+                    Response.Redirect("~/Account/Login");
                 }
             }
-            else
-            {
-                Response.Redirect("~/Account/Login");
-            }
-
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -57,9 +60,9 @@ namespace Graphs4Social
             string avatar = TextBox4.Text;
 
             //Insere os dados na BD (se ja existir alguem com esse username, faz apenas UPDATE aos dados, senao, como ainda nao existe, faz INSERT)
-            string existe = perfil.verificaUtilizador(username);
+            string existeUser = perfil.verificaUtilizador(username);
 
-            if (existe == "sim")
+            if (existeUser == "sim")
             {
                 //Faz update
                 perfil.actualizaPerfil(username,nomeCompleto,dataNasc,sexo,avatar);

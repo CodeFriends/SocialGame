@@ -26,7 +26,7 @@
     <strong><asp:Label ID="Label4" runat="server" Text="Avatar"></asp:Label></strong>
     <br />
     <br />
-    <asp:Image ID="Image1" runat="server" />
+    <asp:Image ID="Image1" width="125" height="125" runat="server"/>
     <br />
     <br />
     <asp:Button ID="Button1" runat="server" Text="Alterar" OnClick="Button1_Click" />

@@ -18,7 +18,8 @@ namespace DAL
             //
         }
         //alteradas as connectionStrings
-        private const string _CONNSTR = @"Data Source=gandalf.dei.isep.ipp.pt\sqlexpress;Initial Catalog=ARQSI104;UserID=ARQSI104;Password=Code5!";
+        private SqlConnection cnx;
+        private const string _CONNSTR = @"Data Source=gandalf.dei.isep.ipp.pt\sqlexpress;Initial Catalog=ARQSI104;User ID=ARQSI104;Password=Code5!";
 
         private string CONNSTR
         {

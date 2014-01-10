@@ -11,7 +11,14 @@ namespace Graphs4Social
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (User.Identity.IsAuthenticated)
+            {
+                //Mostra a página
+            }
+            else
+            {
+                Response.Redirect("~/Account/Login");
+            }
         }
     }
 }

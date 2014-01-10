@@ -5,3 +5,10 @@ C:\Users\user\Desktop\Graphs4Social - Website\Graphs4Social\BLL\obj\Debug\BLL.pd
 C:\Users\user\Desktop\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\DAL.dll
 C:\Users\user\Desktop\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\DAL.pdb
 C:\Users\user\Desktop\Graphs4Social - Website\Graphs4Social\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\BLL.dll
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\BLL.pdb
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\DAL.dll
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\bin\Debug\DAL.pdb
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\obj\Debug\BLL.dll
+G:\Faculdade\LAPR5\Graphs4Social - Website\Graphs4Social\BLL\obj\Debug\BLL.pdb
