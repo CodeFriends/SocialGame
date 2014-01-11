@@ -89,5 +89,29 @@ namespace BLL
             DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
             return dal.getAmigos(username);
         }
+
+        public DataTable getEtiquetas(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getEtiquetas(username);
+        }
+
+        public int criaEtiqueta(string username, string etiqueta)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.criaEtiqueta(username, etiqueta);
+        }
+
+        public DataTable getPedidosRecebidos(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getPedidosRecebidos(username);
+        }
+
+        public DataTable getPedidosFeitos(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getPedidosFeitos(username);
+        }
     }
 }

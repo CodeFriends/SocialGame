@@ -35,6 +35,12 @@ namespace Graphs4Social
                         Image1.ImageUrl="http://www.clker.com/cliparts/9/1/4/0/11954322131712176739question_mark_naught101_02.svg.med.png";
                     }
 
+                    //Tags
+                    DataTable tags = user.getEtiquetas(username);
+                    GridView1.DataSource = tags;
+                    GridView1.ShowHeader = false;
+                    GridView1.DataBind();
+
                     //Pontos
                     DataTable pontos = user.getPontos(username);
                     Label1.Text = Convert.ToString(pontos.Rows[0]["pontos"]) + " pontos.";
@@ -82,6 +88,26 @@ namespace Graphs4Social
             Response.Redirect("~/Geral");
         }
 
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            TextBox1.Visible = true;
+            Button6.Visible = true;
+        }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            string username = User.Identity.Name;
+            string etiqueta = TextBox1.Text;
+
+            if (etiqueta != "Qual a nova Tag ?")
+            {
+                //Guardar nova etiqueta na base dados e criar uma EtiquetaUtilizador com essa etiqueta pertencendo a esse utilizador
+                int guardaNovaEtiqueta = user.criaEtiqueta(username, etiqueta);
+
+
+                Response.Redirect("~/Geral");
+            }
+        }
 
     }
 }

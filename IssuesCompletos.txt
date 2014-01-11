@@ -1,8 +1,0 @@
-*********************************************
-Issue 43 Monitorização-Instalação de Nagios
-
-Instalação do Nagios para monitorização
-
-1100651-Pedro Moura
-1080693-Jose Fontoura
-*********************************************

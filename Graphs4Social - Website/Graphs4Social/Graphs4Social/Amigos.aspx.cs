@@ -32,5 +32,19 @@ namespace Graphs4Social
         {
             Response.Redirect("~/AdicionaAmigo");
         }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName == "Perfil")
+            {
+                
+            }
+
+            if (e.CommandName == "Eliminar")
+            {
+
+            }
+        }
+
     }
 }
