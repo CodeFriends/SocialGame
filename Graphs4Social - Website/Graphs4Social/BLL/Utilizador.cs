@@ -101,6 +101,12 @@ namespace BLL
             DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
             return dal.criaEtiqueta(username, etiqueta);
         }
+        
+        public int associaEtiquetaAutilizador(string username, string etiqueta)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.associaEtiquetaAutilizador(username, etiqueta);
+        }
 
         public DataTable getPedidosRecebidos(string username)
         {
@@ -113,5 +119,96 @@ namespace BLL
             DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
             return dal.getPedidosFeitos(username);
         }
+
+        public int aceitaPedidoAmizade(string username, string nomeDeQuemFezPedido,int forca, string tagRelacao)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.aceitaPedidoAmizade(username, nomeDeQuemFezPedido, forca, tagRelacao);
+        }
+
+        public DataTable top10Pontos()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.top10Pontos();
+        }
+
+        public DataTable getRankForca(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getRankForca(username);
+        }
+
+        public DataTable getTotalForca(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getTotalForca(username);
+        }
+
+        public DataTable getRankDimensao(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getRankDimensao(username);
+        }
+
+        public int criaPedido(string username, string nome)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.criaPedido(username, nome);
+        }
+
+        public int eliminaAmigo(string username,string nome)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.eliminaAmigo(username,nome);
+        }
+
+        public int eliminaPedidoAmizade(string username, string nomeAquemPediuAmizade)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.eliminaPedidoAmizade(username, nomeAquemPediuAmizade);
+        }
+
+        public int recusaPedidoAmizade(string username, string nomeDeQuemFezPedido)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.recusaPedidoAmizade(username, nomeDeQuemFezPedido);
+        }
+
+        public DataTable verPerfil(string nome)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.verPerfil(nome);
+        }
+
+        public int eliminaTag(string username, string tag)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.eliminaTag(username, tag);
+        }
+
+        public DataTable getTagRelacao(string username)
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.getTagRelacao(username);
+        }
+
+        public DataTable utilizadoresExistentes()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.utilizadoresExistentes();
+        }
+
+        public DataTable cloudUtilizadores()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.cloudUtilizadores();
+        }
+
+        public DataTable cloudRelacoes()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.cloudRelacoes();
+        }
+        
     }
 }

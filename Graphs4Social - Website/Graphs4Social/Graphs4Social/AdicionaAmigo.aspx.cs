@@ -18,11 +18,18 @@ namespace Graphs4Social
             if (User.Identity.IsAuthenticated)
             {
                 string nome = User.Identity.Name;
-                DataTable table = user.getUtilizadoresDisponiveis(nome);
-                GridViewUsers.DataSource = table;
-                GridViewUsers.ShowHeader = false;
-                GridViewUsers.DataBind();
-
+                string existeUser = user.verificaUtilizador(nome);
+                if (existeUser == "sim")
+                {
+                    DataTable table = user.getUtilizadoresDisponiveis(nome);
+                    GridViewUsers.DataSource = table;
+                    GridViewUsers.ShowHeader = false;
+                    GridViewUsers.DataBind();
+                }
+                else
+                {
+                    Response.Redirect("~/Perfil");
+                }
             }
             else
             {
@@ -30,21 +37,14 @@ namespace Graphs4Social
             }
         }
 
-        protected void GridViewUsers_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void GridViewUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (e.CommandName == "Pedido")
-            {
-                int index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow linha = GridViewUsers.Rows[index];
-                
-                string last = linha.Cells.ToString();
-                string nome = Convert.ToString(linha.Cells.ToString());
-                string nm = linha.ToString();
+            string username = User.Identity.Name;
+            string nome = GridViewUsers.SelectedRow.Cells[1].Text;
 
-                Label1.Text = nome;
+            int criaPedido = user.criaPedido(username, nome);
 
-                //Response.Redirect("~/AdicionaAmigo");
-            }
+            Response.Redirect("~/AdicionaAmigo");
         }
     }
 }

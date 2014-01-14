@@ -4,13 +4,10 @@
 
     <h2>Lista de Utilizadores disponíveis:</h2>
     <br />
-    <asp:GridView ID="GridViewUsers" runat="server" OnRowCommand="GridViewUsers_RowCommand">
-        <Columns>
-            <asp:ButtonField ButtonType="Button" Text="Enviar Pedido Amizade" CommandName="Pedido" />
-        </Columns>
-    </asp:GridView>
     <br />
-    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+    <asp:GridView ID="GridViewUsers" runat="server" OnSelectedIndexChanged="GridViewUsers_SelectedIndexChanged" >
+        <Columns> <asp:CommandField ButtonType="Button" SelectText="Enviar Pedido de Amizade" ShowSelectButton="True" /> </Columns>
+    </asp:GridView>
     <br />
 
 </asp:Content>

@@ -57,7 +57,17 @@ namespace Graphs4Social
             string nomeCompleto = TextBox1.Text;
             string dataNasc = TextBox2.Text;
             string sexo = DropDownList1.SelectedValue;
-            string avatar = TextBox4.Text;
+            string aux = TextBox4.Text;
+            string avatar;
+
+            if(aux != "Url da imagem...")
+            {
+                avatar = TextBox4.Text;
+            }
+            else
+            {
+                avatar = "http://img607.imageshack.us/img607/6773/iigu.png";
+            }
 
             //Insere os dados na BD (se ja existir alguem com esse username, faz apenas UPDATE aos dados, senao, como ainda nao existe, faz INSERT)
             string existeUser = perfil.verificaUtilizador(username);

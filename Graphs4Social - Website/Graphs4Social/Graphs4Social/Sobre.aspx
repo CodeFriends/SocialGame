@@ -7,7 +7,7 @@
    <br/>
     <article>
         <p>        
-            Trabalho desenvolvido no âmbito da unidade curricular de LAPR V.
+            Trabalho académico desenvolvido no Instituto Superior de Engenharia do Porto, no âmbito da unidade curricular de LAPR V.
         </p>
     </article>
 
@@ -15,6 +15,7 @@
         <h3>Graphs4Social</h3>
         <ul>
         <li><a id="A1" runat="server" href="~/">Geral</a></li>
+        <li><a id="A5" runat="server" href="~/MostraPerfil">O Meu Perfil</a></li>
         <li><a id="A2" runat="server" href="~/Amigos">Amigos</a></li>
         <li><a id="A3" runat="server" href="~/Pedidos">Pedidos</a></li>
         <li><a id="A4" runat="server" href="~/Download">Download</a></li>

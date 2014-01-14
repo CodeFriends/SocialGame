@@ -21,10 +21,10 @@
     </div>
 
     <div style="width:33.34%;position:relative;float:left;">
-    <h5>As Minhas Tags:</h5>
-    <asp:GridView ID="GridView1" runat="server">
+    <h5>As Minhas Tags Pessoais:</h5>
+    <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <Columns>
-            <asp:ButtonField Text="Remover" />
+            <asp:CommandField ButtonType="Link" SelectText="Remover" ShowSelectButton="True" />
         </Columns>
     </asp:GridView>
     <br />
@@ -33,6 +33,11 @@
     <br />
     <asp:TextBox ID="TextBox1" runat="server" Visible="false" Text="Qual a nova Tag ?" onfocus="if(this.value=='Qual a nova Tag ?'){this.value=''}else{this.value=this.value}" onblur="if(this.value==''){this.value='Qual a nova Tag ?'}else{this.value=this.value}"></asp:TextBox>
     <asp:Button ID="Button6" runat="server" Text="Guardar" Visible="false" OnClick="Button6_Click"/>
+    <br />
+    <h5>As Minhas Tags de Relação:</h5>
+    <br />
+    <asp:GridView ID="GridView5" runat="server">
+    </asp:GridView>
     </div>
 
     <div style="width:33.33%;position:relative;float:left;">
@@ -62,6 +67,7 @@
     <div style="width:100%">
     <p><br /><br /><br /></p>
     <p><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
     </div>
 
     <asp:Panel ID="Panel2" runat="server"  >
@@ -89,4 +95,40 @@
     </div>
     </asp:Panel>
 
+    <div style="width:100%">
+    <p><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
+    </div>
+    <div style="width:100%">
+    <p><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
+    <p><br /><br /><br /></p>
+    </div>
+
+    <asp:Panel ID="Panel3" runat="server"  >
+    <div style="width:33.33%;position:relative;float:left;">
+    <h5>Utilizadores existentes:</h5>
+    <br />
+    <asp:GridView ID="GridView6" runat="server">
+    </asp:GridView>
+    <br />
+    </div>
+     
+    <div style="width:33.33%;position:relative;float:left;">
+    <h5>Tag Cloud de Utilizadores:</h5>
+    <br />
+    <asp:GridView ID="GridView7" runat="server">
+    </asp:GridView>
+    <br />
+    </div>
+    <div style="width:33.33%;position:relative;float:left;">
+    <h5>Tag Cloud de Relações:</h5>
+    <br />
+    <asp:GridView ID="GridView8" runat="server">
+    </asp:GridView>
+    <br />
+    </div>
+    </asp:Panel>
+    <br />
 </asp:Content>
