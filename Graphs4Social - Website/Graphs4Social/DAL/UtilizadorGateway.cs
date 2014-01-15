@@ -347,6 +347,32 @@ namespace DAL
             }
         }
 
+        public DataTable top10Forca()
+        {
+            try
+            {
+                DataSet ds = ExecuteQuery(GetConnection(false), "SELECT SUM(forca_ligacao) FROM Ligacao WHERE id_utilizador1 IN (SELECT Utilizador.id_utilizador FROM Utilizador)");
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Erro BD", ex);
+            }
+        }
+
+        public DataTable top10Dimensao()
+        {
+            try
+            {
+                DataSet ds = ExecuteQuery(GetConnection(false), "SELECT nome_completo FROM Utilizador WHERE id_utilizador IN (SELECT TOP 10 id_utilizador1 FROM Ligacao GROUP BY id_utilizador1 ORDER BY COUNT(*) DESC)");
+                return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                throw new ApplicationException("Erro BD", ex);
+            }
+        }
+
         public DataTable getRankForca(string username)
         {
             try

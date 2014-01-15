@@ -5,7 +5,7 @@
     <h2>Download</h2>
     <br />
     <br />
-    <p>Pode fazer download do jogo (aplicação em 3D) clicando<a runat="server" href="~/">aqui</a>.</p>
+    <p>Pode fazer download do jogo (aplicação em 3D) clicando<a runat="server" href="~/Download">aqui</a>.</p>
     <br />
     <br />
 </asp:Content>

@@ -132,6 +132,18 @@ namespace BLL
             return dal.top10Pontos();
         }
 
+        public DataTable top10Forca()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.top10Forca();
+        }
+
+        public DataTable top10Dimensao()
+        {
+            DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();
+            return dal.top10Dimensao();
+        }
+
         public DataTable getRankForca(string username)
         {
             DAL.UtilizadorGateway dal = new DAL.UtilizadorGateway();

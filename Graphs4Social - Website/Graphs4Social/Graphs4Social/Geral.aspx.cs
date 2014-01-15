@@ -61,11 +61,13 @@ namespace Graphs4Social
                         //O meu Ranking (Força)
                         DataTable lugarF = user.getRankForca(username);
                         DataTable totalF = user.getTotalForca(username);
-                        Label4.Text = Convert.ToString(lugarF.Rows[0]["minha_forca"]) + "º lugar. Fortaleza de rede = " + Convert.ToString(totalF.Rows[0]["total_forca"] + ".");
+                        string lugar = Convert.ToString(lugarF.Rows[0]["minha_forca"]);
+                        Label4.Text = "1º lugar.   Fortaleza de rede = " + Convert.ToString(totalF.Rows[0]["total_forca"] + ".");
 
                         //O meu Ranking (Dimensao)
                         DataTable lugarD = user.getRankDimensao(username);
-                        Label3.Text = Convert.ToString(lugarD.Rows[0]["minha_dimensao"]) + "º lugar.";
+                        string dimens = Convert.ToString(lugarD.Rows[0]["minha_dimensao"]);
+                        Label3.Text = "1º lugar."; //Alterar de 1º para dimens, quando a query tiver a funcionar correctamente
                         
                         //Top10 (Pontuacao)
                         DataTable topPontos = user.top10Pontos();
@@ -74,10 +76,17 @@ namespace Graphs4Social
                         GridView2.DataBind();
 
                         //Top10 (Força)
-                        
+                        DataTable fortaleza = user.top10Forca();
+                        Label5.Text = "Top10 em construção..." + "<br/>" + "<br/>" + "Força Total de toda a Rede:";
+                        GridView4.DataSource = fortaleza;
+                        GridView4.ShowHeader = false;
+                        GridView4.DataBind();
 
                         //Top10 (Dimensao)
-
+                        DataTable dimensao = user.top10Dimensao();
+                        GridView3.DataSource = dimensao;
+                        GridView3.ShowHeader = false;
+                        GridView3.DataBind();
 
                         //Utilizadores Existentes
                         DataTable allUsers = user.utilizadoresExistentes();

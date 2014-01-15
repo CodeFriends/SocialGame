@@ -89,6 +89,7 @@
     <div style="width:33.33%;position:relative;float:left;">
     <h5>Top10 segundo a Fortaleza da Rede:</h5>
     <br />
+    <asp:Label ID="Label5" runat="server" Text=""></asp:Label>
     <asp:GridView ID="GridView4" runat="server">
     </asp:GridView>
     <br />

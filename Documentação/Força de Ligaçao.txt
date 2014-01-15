@@ -1,0 +1,16 @@
+Força de Ligação entre Utilizadores:
+
+
+1 - Conhecidos
+2 - Colegas
+3 - Amigos
+4 - Melhores Amigos
+5 - Primos
+6 - Amigos Coloridos
+7 - Irmãos
+8 - Namorados
+9 - Casados
+10 - Almas-Gémeas
+
+
+(Isto é apenas uma sugestão-guia, não existe nenhuma regra oficial definida, portanto, cada Utilizador atribui a força que quiser e a tag que bem entender)
